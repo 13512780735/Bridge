@@ -1,4 +1,4 @@
-package com.bridgesafe.network.Appconst;
+package com.bridgesafe.bridge.network.Appconst;
 
 /**
  * user：lqm

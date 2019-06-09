@@ -1,4 +1,4 @@
-package com.bridgesafe.network.model;
+package com.bridgesafe.bridge.network.model;
 
 /**
  * Created by wenfengcai on 2016/12/29.

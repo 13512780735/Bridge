@@ -1,4 +1,4 @@
-package com.bridgesafe.network.model;
+package com.bridgesafe.bridge.network.model;
 
 import java.io.Serializable;
 

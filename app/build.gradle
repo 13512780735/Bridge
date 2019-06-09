@@ -43,4 +43,5 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
     implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.elvishew:xlog:1.6.1'
 }

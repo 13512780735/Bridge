@@ -1,4 +1,4 @@
-package com.bridgesafe.network;
+package com.bridgesafe.bridge.network;
 
 
 

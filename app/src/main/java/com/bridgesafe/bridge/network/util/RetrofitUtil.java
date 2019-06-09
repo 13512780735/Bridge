@@ -1,9 +1,9 @@
-package com.bridgesafe.network.util;
+package com.bridgesafe.bridge.network.util;
 
 
 import com.bridgesafe.bridge.BuildConfig;
-import com.bridgesafe.network.ApiService;
-import com.bridgesafe.network.Appconst.AppConst;
+import com.bridgesafe.bridge.network.ApiService;
+import com.bridgesafe.bridge.network.Appconst.AppConst;
 import com.ihsanbal.logging.Level;
 import com.ihsanbal.logging.LoggingInterceptor;
 
