@@ -10,35 +10,37 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dp_30"
         android:src="@mipmap/login_header" />
 
     <LinearLayout
         android:id="@id/titleBar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_60"
-        android:layout_marginTop="40dip"
         android:orientation="vertical">
 
         <android.support.design.widget.TabLayout
             android:id="@+id/sliding_tabs"
-            android:layout_width="wrap_content"
+            android:layout_width="240dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="30dip"
-            android:layout_marginRight="30dip"
+            android:layout_marginLeft="@dimen/dp_50"
+            android:layout_marginRight="@dimen/dp_50"
             android:layout_weight="1"
-            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorColor="@color/theme_bg_tex"
             app:tabIndicatorHeight="2dp"
-            app:tabSelectedTextColor="@color/white"
+            app:tabSelectedTextColor="@color/theme_bg_tex"
             app:tabTextAppearance="@style/TabLayoutTextStyle"
-            app:tabTextColor="@color/white" />
+            app:tabTextColor="@color/black" />
+
 
     </LinearLayout>
 
     <com.bridgesafe.bridge.view.NoScrollViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:layout_marginTop="20dip"
         android:layout_weight="1" />
 </LinearLayout>

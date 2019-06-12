@@ -24,6 +24,7 @@ import android.widget.Toast;
 import com.bridgesafe.bridge.R;
 import com.bridgesafe.bridge.util.AppManager;
 import com.bridgesafe.bridge.util.CustomDialog;
+import com.bridgesafe.bridge.util.StatusBarUtil;
 import com.bridgesafe.bridge.util.ToastUtils;
 import com.bridgesafe.bridge.view.IconfontTextView;
 
@@ -34,7 +35,7 @@ import butterknife.ButterKnife;
  * Created by Administrator on 2017/9/11.
  */
 
-public class BaseActivity extends AppCompatActivity  {
+public class BaseActivity extends AppCompatActivity {
     protected final static int DATA_LOAD_ING = 0x001;
     protected final static int DATA_LOAD_COMPLETE = 0x002;
     protected final static int DATA_LOAD_FAIL = 0x003;
@@ -68,8 +69,8 @@ public class BaseActivity extends AppCompatActivity  {
         mContext = this;
         AppManager.getAppManager().addActivity(this);
         int color = getResources().getColor(R.color.white);
-//        StatusBarUtil.setColor(this, color, 0);
-//        StatusBarUtil.setLightMode(this);
+        StatusBarUtil.setColor(this, color, 0);
+        StatusBarUtil.setLightMode(this);
         // RxBus.get().register(this);
         //  ukey = UtilPreference.getStringValue(this, "ukey");
 

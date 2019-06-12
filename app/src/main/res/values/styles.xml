@@ -8,14 +8,14 @@
         <item name="windowActionBar">false</item>
         <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryDark">@color/white</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:fitsSystemWindows">true</item>
-        <item name="android:windowBackground">@color/defualt_window_background</item>
+        <item name="android:windowBackground">@color/white</item>
 
     </style>
     <style name="AnimationActivity" parent="@android:style/Animation.Activity">
@@ -46,6 +46,10 @@
         <item name="android:windowIsTranslucent">true</item>
     </style>
     <style name="TabLayoutTextStyle">
-        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textSize">@dimen/sp_20</item>
+    </style>
+    <!--是否选中注册-->
+    <style name="mycheckbox1" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/register_check</item>
     </style>
 </resources>

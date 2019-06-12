@@ -1,6 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/dp_40"
+    android:paddingRight="@dimen/dp_40"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/phone" />
+
+        <EditText
+            android:id="@+id/ed_register_phone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@null"
+            android:hint="请输入您的手机号/用户名" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_height="@dimen/dp_50"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/password" />
+
+        <EditText
+            android:id="@+id/ed_register_pwd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@null"
+            android:hint="请输入密码" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"></View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_20"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/dp_50"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="4"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/dp_30"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/dp_30"
+                android:src="@mipmap/verify_code" />
+
+            <EditText
+                android:id="@+id/ed_register_code"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawablePadding="10dip"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <com.bridgesafe.bridge.view.BorderTextView
+            android:id="@+id/send_code_btn"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="2"
+            app:contentBackColor="@color/theme_bg_tex"
+            app:cornerRadius="20dp"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="验证码"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"></View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_20"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkbox01"
+            style="@style/mycheckbox1"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            android:checked="true" />
+
+        <TextView
+            android:id="@+id/protocol_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="我已阅读本协议,并阅读《桥安航用户协议》"
+            android:textColor="@color/register_text_color"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <com.bridgesafe.bridge.view.BorderTextView
+        android:id="@+id/tv_register"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_30"
+        android:text="注册"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/white"
+        app:contentBackColor="@color/theme_bg_tex"
+        app:cornerRadius="25dp" />
+</LinearLayout>
