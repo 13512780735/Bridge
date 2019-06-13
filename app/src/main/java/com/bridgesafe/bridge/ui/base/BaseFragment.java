@@ -1,6 +1,7 @@
 package com.bridgesafe.bridge.ui.base;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.IdRes;
@@ -39,8 +40,7 @@ public abstract class BaseFragment extends Fragment {
     private CustomDialog dialog;
     private Unbinder unbinder;
     public String openid;
-    public String theme_bg_tex;
-    public String lat,lng;
+    public String lat, lng;
 
 
     //是否是第一次开启网络加载
@@ -61,7 +61,7 @@ public abstract class BaseFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-       // view = inflater.inflate(setContentView(), container, false);
+        // view = inflater.inflate(setContentView(), container, false);
         view = inflater.inflate(setContentView(), container, false);
 //        if (view == null)
 //            view = inflater.inflate(setContentView(), container, false);
@@ -69,7 +69,7 @@ public abstract class BaseFragment extends Fragment {
         /**初始化的时候去加载数据**/
         unbinder = ButterKnife.bind(this, view);
         //isCanLoadData();
-       // lazyLoad();
+        // lazyLoad();
         //可见，但是并没有加载过
 //        if (isFragmentVisible && !isFirst) {
 //            onFragmentVisibleChange(true);
@@ -111,6 +111,7 @@ public abstract class BaseFragment extends Fragment {
     protected void onFragmentVisibleChange(boolean isVisible) {
 
     }
+
     @Override
     public void onDestroy() {
         super.onDestroy();
@@ -139,13 +140,14 @@ public abstract class BaseFragment extends Fragment {
 //        // 启动分享GUI
 //        oks.show(getActivity());
 //    }
+
     /**
      * 视图是否已经对用户可见，系统的方法
      */
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
-       // isCanLoadData();
+        // isCanLoadData();
 //        if (isVisibleToUser) {
 ////            isFragmentVisible = true;
 ////        }
@@ -188,13 +190,14 @@ public abstract class BaseFragment extends Fragment {
      *
      * @param txt
      */
-    public void setTitle(String txt) {
+    public void setTitle(String txt, int color) {
         TextView title = (TextView) findViewById(R.id.title);
         if (title == null) {
             return;
         }
         title.setVisibility(View.VISIBLE);
         title.setText(txt);
+        title.setTextColor(color);
     }
 
     /**

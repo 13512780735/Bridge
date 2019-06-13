@@ -157,13 +157,14 @@ public class BaseActivity extends AppCompatActivity {
      *
      * @param txt
      */
-    public void setTitle(String txt) {
+    public void setTitle(String txt, int color) {
         TextView title = (TextView) findViewById(R.id.title);
         if (title == null) {
             return;
         }
         title.setVisibility(View.VISIBLE);
         title.setText(txt);
+        title.setTextColor(color);
     }
 
     /**
@@ -187,20 +188,20 @@ public class BaseActivity extends AppCompatActivity {
         toolbar_righ_tv.setOnClickListener(onClickListener);
     }
 
-    public void setRightText02(String txt, View.OnClickListener onClickListener) {
-        IconfontTextView toolbar_righ_tv = (IconfontTextView) findViewById(R.id.toolbar_righ_tv);
-        if (toolbar_righ_tv == null) {
-            return;
-        }
-        ImageView toolbar_righ_iv = (ImageView) findViewById(R.id.toolbar_righ_iv);
-        if (toolbar_righ_iv == null) {
-            return;
-        }
-        toolbar_righ_iv.setVisibility(View.GONE);
-        toolbar_righ_tv.setVisibility(View.VISIBLE);
-        toolbar_righ_tv.setText(txt);
-        toolbar_righ_tv.setOnClickListener(onClickListener);
-    }
+//    public void setRightText02(String txt, View.OnClickListener onClickListener) {
+//        IconfontTextView toolbar_righ_tv = (IconfontTextView) findViewById(R.id.toolbar_righ_tv);
+//        if (toolbar_righ_tv == null) {
+//            return;
+//        }
+//        ImageView toolbar_righ_iv = (ImageView) findViewById(R.id.toolbar_righ_iv);
+//        if (toolbar_righ_iv == null) {
+//            return;
+//        }
+//        toolbar_righ_iv.setVisibility(View.GONE);
+//        toolbar_righ_tv.setVisibility(View.VISIBLE);
+//        toolbar_righ_tv.setText(txt);
+//        toolbar_righ_tv.setOnClickListener(onClickListener);
+//    }
 
     /**
      * 右侧只显示一个图片

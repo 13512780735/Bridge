@@ -16,6 +16,7 @@
     <color name="theme_bg_tex01">#FFEFF0</color>
 
     <color name="text_color">#969696</color>
+    <color name="bt_color">#969696</color>
 
     <!--主题背景色-->
     <color name="defualt_window_background">#F7F7F7</color>

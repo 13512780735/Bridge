@@ -13,14 +13,14 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:paddingLeft="10dp"
         android:visibility="gone">
 
         <ImageView
             android:id="@+id/toolbar_left_iv"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_10"
             android:src="@mipmap/icon_back" />
 
         <TextView
@@ -40,7 +40,6 @@
         android:ellipsize="end"
         android:gravity="center"
         android:maxLength="12"
-        android:paddingTop="20dip"
         android:singleLine="true"
         android:text="@null"
         android:textColor="@color/black"
