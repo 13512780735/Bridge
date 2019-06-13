@@ -1,6 +1,5 @@
 package com.bridgesafe.bridge.ui.fragment;
 
-import android.graphics.Color;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.CheckBox;
