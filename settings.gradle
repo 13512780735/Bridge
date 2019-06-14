@@ -1,1 +1,1 @@
-include ':app', ':simpledrawerlayout'
+include ':app', ':simpledrawerlayout',':library'
