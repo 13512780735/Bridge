@@ -6,7 +6,7 @@
     <!-- customDialog-->
     <color name="sd_color_black">#000000</color>
     <color name="sd_color_white">#ffffff</color>
-    <color name="line">#F7F7F7</color>
+    <color name="line">#AAEBEBEB</color>
     <color name="text_red">#FF0000</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>

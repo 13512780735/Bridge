@@ -4,13 +4,15 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical">
+
     <ImageView
+        android:id="@+id/iv_avatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/dp_20"
         android:layout_gravity="center_horizontal"
         android:layout_margin="@dimen/dp_20"
-        android:src="@mipmap/login_header"/>
+        android:paddingTop="@dimen/dp_20"
+        android:src="@mipmap/login_header" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,29 +23,97 @@
             android:id="@+id/tv_member_info"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="个人资料"
-            android:gravity="center_horizontal"
+            android:layout_weight="1"
             android:drawablePadding="@dimen/dp_10"
             android:drawableTop="@mipmap/memeber_info"
-            android:layout_weight="1"/>
+            android:gravity="center_horizontal"
+            android:text="个人资料" />
+
         <TextView
             android:id="@+id/tv_record_icon"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="航行记录"
-            android:gravity="center_horizontal"
+            android:layout_weight="1"
             android:drawablePadding="@dimen/dp_10"
             android:drawableTop="@mipmap/record_icon"
-            android:layout_weight="1"/>
+            android:gravity="center_horizontal"
+            android:text="航行记录" />
+
         <TextView
             android:id="@+id/tv_shipinfo_icon"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="船舶信息"
-            android:gravity="center_horizontal"
+            android:layout_weight="1"
             android:drawablePadding="@dimen/dp_10"
             android:drawableTop="@mipmap/shipinfo_icon"
-            android:layout_weight="1"/>
+            android:gravity="center_horizontal"
+            android:text="船舶信息" />
 
     </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_20"
+        android:drawableLeft="@mipmap/warning_icon"
+        android:drawablePadding="@dimen/dp_20"
+        android:padding="@dimen/dp_10"
+        android:text="桥梁监控预警"
+        android:textColor="@color/black" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"></View>
+
+    <TextView
+        android:id="@+id/tv_monitor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:drawableLeft="@mipmap/monitor_icon"
+        android:drawablePadding="@dimen/dp_20"
+        android:padding="@dimen/dp_10"
+        android:text="意见反馈"
+        android:textColor="@color/black" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"></View>
+
+    <TextView
+        android:id="@+id/tv_bacdfeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:drawableLeft="@mipmap/bacdfeed_icon"
+        android:drawablePadding="@dimen/dp_20"
+        android:padding="@dimen/dp_10"
+        android:text="修改密码"
+        android:textColor="@color/black" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"></View>
+
+    <TextView
+        android:id="@+id/tv_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:drawableLeft="@mipmap/setting_icon"
+        android:drawablePadding="@dimen/dp_20"
+        android:padding="@dimen/dp_10"
+        android:text="设置"
+        android:textColor="@color/black" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"></View>
 </LinearLayout>

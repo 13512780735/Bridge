@@ -52,7 +52,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.login.ForgetPwdActivity" />
-        <activity android:name=".ui.login.RegisterProtocolActivity"></activity>
+        <activity android:name=".ui.login.RegisterProtocolActivity" />
+        <activity android:name=".ui.other.MemberActivity" />
+        <activity android:name=".ui.other.RecordActivity" />
+        <activity android:name=".ui.other.ShipInfoActivity" />
+        <activity android:name=".ui.other.WarningActivity" />
+        <activity android:name=".ui.other.MonitorActivity" />
+        <activity android:name=".ui.other.BacdfeedActivity" />
+        <activity android:name=".ui.other.SettingActivity"></activity>
     </application>
 
 </manifest>
