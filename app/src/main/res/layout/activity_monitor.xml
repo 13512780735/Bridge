@@ -1,9 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/defualt_window_background"
     android:orientation="vertical"
     tools:context=".ui.other.MonitorActivity">
+
     <include layout="@layout/common_toolbar"></include>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"></View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/ed_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="请提出您的意见与反馈"
+            android:padding="10dip"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/line"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/defualt_window_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:padding="@dimen/dp_10"
+                android:text="联系方式：" />
+
+            <EditText
+                android:id="@+id/ed_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:background="@null"
+                android:inputType="number"
+                android:padding="@dimen/dp_10" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:padding="@dimen/dp_10"
+                android:text="邮箱：" />
+
+            <EditText
+                android:id="@+id/ed_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:background="@null"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/dp_10" />
+        </LinearLayout>
+
+        <com.bridgesafe.bridge.view.BorderTextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_margin="@dimen/dp_30"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            app:contentBackColor="@color/bt_color"
+            app:cornerRadius="25dp" />
+    </LinearLayout>
 </LinearLayout>
