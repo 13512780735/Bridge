@@ -43,7 +43,7 @@ public class RecordActivity extends BaseActivity {
     }
 
     private void initUI() {
-        setTitle("航行记录", getResources().getColor(R.color.black));
+        setTitle("航行记录", getResources().getColor(R.color.title_color));
         mSwipeRefreshLayout.setColorSchemeColors(Color.rgb(47, 223, 189));
         initAdapter();
     }

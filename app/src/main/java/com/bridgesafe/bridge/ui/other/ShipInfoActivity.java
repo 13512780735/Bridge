@@ -40,6 +40,6 @@ public class ShipInfoActivity extends BaseActivity {
     }
 
     private void initUI() {
-        setTitle("船舶信息", getResources().getColor(R.color.black));
+        setTitle("船舶信息", getResources().getColor(R.color.title_color));
     }
 }

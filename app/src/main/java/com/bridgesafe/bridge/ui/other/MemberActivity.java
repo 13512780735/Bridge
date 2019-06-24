@@ -34,6 +34,6 @@ public class MemberActivity extends BaseActivity {
     }
 
     private void initUI() {
-        setTitle("个人信息", getResources().getColor(R.color.black));
+        setTitle("个人信息", getResources().getColor(R.color.title_color));
     }
 }

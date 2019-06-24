@@ -30,7 +30,7 @@ public class SettingActivity extends BaseActivity {
     }
 
     private void initUI() {
-        setTitle("设置",getResources().getColor(R.color.black));
+        setTitle("设置",getResources().getColor(R.color.title_color));
         tv_clear.setText(DataClearUtil.getTotalCacheSize(this));
     }
     @OnClick({R.id.rl_clear,R.id.tv_logout})
