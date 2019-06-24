@@ -59,7 +59,9 @@
         <activity android:name=".ui.other.WarningActivity" />
         <activity android:name=".ui.other.MonitorActivity" />
         <activity android:name=".ui.other.BacdfeedActivity" />
-        <activity android:name=".ui.other.SettingActivity"></activity>
+        <activity android:name=".ui.other.SettingActivity" />
+        <activity android:name=".ui.other.WarningDetailsActivity" />
+        <activity android:name=".ui.other.RecordDetailActivity"></activity>
     </application>
 
 </manifest>

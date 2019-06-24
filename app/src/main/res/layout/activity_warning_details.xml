@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/defualt_window_background"
     android:orientation="vertical"
-    tools:context=".ui.other.ShipInfoActivity">
+    tools:context=".ui.other.WarningDetailsActivity">
 
     <include layout="@layout/common_toolbar"></include>
 
@@ -23,16 +23,39 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/dp_20"
-            android:text="船舶名称：" />
+            android:padding="@dimen/dp_10"
+            android:text="桥梁名称：" />
 
         <TextView
-            android:id="@+id/tv_ship_name"
+            android:id="@+id/tv_bridge_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/dp_20" />
+            android:padding="@dimen/dp_10" />
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            android:text="安全预警：" />
+
+        <TextView
+            android:id="@+id/tv_bridge_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10" />
+    </LinearLayout>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -46,20 +69,48 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/dp_20"
-            android:text="船舶识别码：" />
+            android:padding="@dimen/dp_10"
+            android:text="预警时间：" />
 
         <TextView
-            android:id="@+id/tv_ship_code"
+            android:id="@+id/tv_bridge_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/dp_20" />
+            android:padding="@dimen/dp_10" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_bridge_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:src="@mipmap/bridge_detail_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            android:text="维护时间：" />
+
+        <TextView
+            android:id="@+id/tv_bridge_time01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10" />
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/line"></View>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -69,121 +120,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/dp_20"
-            android:text="MMSI：" />
+            android:padding="@dimen/dp_10"
+            android:text="通船时间：" />
 
         <TextView
-            android:id="@+id/tv_ship_mmsi"
+            android:id="@+id/tv_bridge_time02"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/dp_20" />
+            android:padding="@dimen/dp_10" />
     </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/line"></View>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/dp_20"
-            android:text="船舶最大高度：" />
-
-        <TextView
-            android:id="@+id/tv_ship_height"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/dp_20" />
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/line"></View>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/dp_20"
-            android:text="船舶宽度：" />
-
-        <TextView
-            android:id="@+id/tv_ship_width"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/dp_20" />
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/line"></View>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/dp_20"
-            android:text="船舶空载：" />
-
-        <TextView
-            android:id="@+id/tv_ship_no_load"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/dp_20" />
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/line"></View>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/dp_20"
-            android:text="船舶满载：" />
-
-        <TextView
-            android:id="@+id/tv_ship_full_load"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/dp_20" />
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/line"></View>
-    <com.bridgesafe.bridge.view.BorderTextView
-        android:id="@+id/tv_confirm"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_50"
-        android:gravity="center"
-        android:layout_margin="@dimen/dp_30"
-        android:text="提交"
-        android:textColor="@color/white"
-        android:textSize="@dimen/sp_16"
-        app:contentBackColor="@color/theme_bg_tex"
-        app:cornerRadius="25dp" />
 </LinearLayout>

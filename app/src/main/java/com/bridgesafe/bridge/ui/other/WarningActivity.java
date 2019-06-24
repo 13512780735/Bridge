@@ -53,6 +53,7 @@ public class WarningActivity extends BaseActivity {
         mSwipeRefreshLayout.setColorSchemeColors(Color.rgb(47, 223, 189));
         initAdapter();
     }
+
     private void initAdapter() {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new WarningListAdapter(R.layout.warning_listview_items, data);
@@ -69,9 +70,11 @@ public class WarningActivity extends BaseActivity {
 //                Bundle bundle = new Bundle();
 //                bundle.putString("id", id);
 //                toActivity(GoodDescActivity.class, bundle);
+                toActivity(WarningDetailsActivity.class);
             }
         });
     }
+
     public void initData() {
         data = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
