@@ -2,6 +2,7 @@ package com.bridgesafe.bridge.ui.other;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -23,7 +24,7 @@ import butterknife.BindView;
 /**
  * 桥梁监控预警
  */
-public class WarningActivity extends BaseActivity {
+public class WarningActivity extends BaseActivity implements BaseQuickAdapter.RequestLoadMoreListener, SwipeRefreshLayout.OnRefreshListener {
 
     @BindView(R.id.mSwipeRefreshLayout)
     SwipeRefreshLayout mSwipeRefreshLayout;
@@ -49,7 +50,7 @@ public class WarningActivity extends BaseActivity {
     private void initUI() {
         setTitle("桥梁监控预警", getResources().getColor(R.color.black));
         titleBar.setBackgroundColor(getResources().getColor(R.color.theme_bg_tex));
-        //mSwipeRefreshLayout.setOnRefreshListener(this);
+     // mSwipeRefreshLayout.setOnRefreshListener(this);
         mSwipeRefreshLayout.setColorSchemeColors(Color.rgb(47, 223, 189));
         initAdapter();
     }
@@ -58,9 +59,10 @@ public class WarningActivity extends BaseActivity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new WarningListAdapter(R.layout.warning_listview_items, data);
         //mAdapter.setOnLoadMoreListener(this, mRecyclerView);
+        mAdapter.setEnableLoadMore(false);
         mRecyclerView.setAdapter(mAdapter);
 //        mAdapter.disableLoadMoreIfNotFullPage();
-        // mSwipeRefreshLayout.setOnRefreshListener(this);
+        mSwipeRefreshLayout.setOnRefreshListener(this);
         mAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener()
 
         {
@@ -82,5 +84,51 @@ public class WarningActivity extends BaseActivity {
             falseModel.setTitle("" + i);
             data.add(falseModel);
         }
+    }
+    @Override
+    public void onLoadMoreRequested() {
+        mRecyclerView.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+//                if (mCurrentCounter >= TOTAL_COUNTER) {
+//                    //数据全部加载完毕
+//                    mAdapter.loadMoreEnd();
+//                } else {
+//                    if (isErr) {
+//                        //成功获取更多数据
+//                        //  mQuickAdapter.addData(DataServer.getSampleData(PAGE_SIZE));
+//                        pageNum += 1;
+//                        initData(pageNum, true);
+//                        mCurrentCounter = mAdapter.getData().size();
+//                        mAdapter.loadMoreComplete();
+//                    } else {
+//                        //获取更多数据失败
+//                        isErr = true;
+//                        mAdapter.loadMoreFail();
+//
+//                    }
+//                }
+                mAdapter.loadMoreEnd();
+                mAdapter.loadMoreComplete();
+            }
+
+        }, 3000);
+    }
+
+    @Override
+    public void onRefresh() {
+        mAdapter.setEnableLoadMore(false);//禁止加载
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+//                // mAdapter.setNewData(data);
+//                isErr = false;
+//                mCurrentCounter = PAGE_SIZE;
+//                pageNum = 1;//页数置为1 才能继续重新加载
+//                initData(pageNum, false);
+                mSwipeRefreshLayout.setRefreshing(false);
+                mAdapter.setEnableLoadMore(false);//启用加载
+            }
+        }, 2000);
     }
 }

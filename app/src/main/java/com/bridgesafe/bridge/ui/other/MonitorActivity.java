@@ -36,7 +36,7 @@ public class MonitorActivity extends BaseActivity {
     }
 
     private void initUI() {
-        setTitle("意见与反馈", getResources().getColor(R.color.black));
+        setTitle("意见与反馈", getResources().getColor(R.color.title_color));
         EditTextSizeCheckUtil.textChangeListener textChangeListener = new EditTextSizeCheckUtil.textChangeListener(mTvConfirm);
         textChangeListener.addAllEditText(mEdContent);
         EditTextSizeCheckUtil.setChangeListener(new IEditTextChangeListener() {

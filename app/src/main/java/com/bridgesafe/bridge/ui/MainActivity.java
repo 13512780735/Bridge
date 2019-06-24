@@ -4,6 +4,9 @@ import android.os.Bundle;
 
 import com.bridgesafe.bridge.R;
 import com.bridgesafe.bridge.ui.base.BaseActivity;
+import com.bridgesafe.bridge.ui.main.TideActivity;
+import com.bridgesafe.bridge.ui.main.WaterActivity;
+import com.bridgesafe.bridge.ui.main.WeatherActivity;
 import com.bridgesafe.bridge.util.AppManager;
 import com.elvishew.xlog.XLog;
 import com.lxj.xpopup.XPopup;
@@ -20,29 +23,31 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView tv_test = findView(R.id.tv_test);
-        tv_test.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                XLog.d("点击了");
+    }
+
+    @OnClick({R.id.iv_member, R.id.rl_water, R.id.rl_weather, R.id.rl_tide})
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.iv_member:
                 new XPopup.Builder(mContext)
 //                        .asCustom(new CustomDrawerPopupView(getContext()))
                         .asCustom(new PagerDrawerPopup(mContext))
 //                        .asCustom(new ListDrawerPopupView(getContext()))
                         .show();
-            }
-        });
+                break;
+            case R.id.rl_water:
+                toActivity(WaterActivity.class);
+                break;
+            case R.id.rl_weather:
+                toActivity(WeatherActivity.class);
+                break;
+            case R.id.rl_tide:
+                toActivity(TideActivity.class);
+                break;
+        }
     }
 
-//    @OnClick({R.id.tv_test})
-//    public void onClick(View v) {
-//        switch (v.getId()) {
-//            case R.id.tv_test:
-//
-//                break;
-//        }
-//    }
-private long firstTime = 0;
+    private long firstTime = 0;
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {

@@ -3,6 +3,7 @@ package com.bridgesafe.bridge.app;
 import android.app.Application;
 import android.content.Context;
 
+import com.baidu.mapapi.SDKInitializer;
 import com.bridgesafe.bridge.BuildConfig;
 import com.elvishew.xlog.LogConfiguration;
 import com.elvishew.xlog.LogLevel;
@@ -31,7 +32,7 @@ public class MyApplication extends Application {
         instance = this;
         applicationContext = this;
         initLogger();//日志打印初始化
-
+       // SDKInitializer.initialize(this);
         // MobSDK.init(this);//shareSDk初始化
         // preInitX5Core();
         // ZXingLibrary.initDisplayOpinion(this);

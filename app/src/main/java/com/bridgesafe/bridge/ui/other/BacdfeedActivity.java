@@ -38,7 +38,7 @@ public class BacdfeedActivity extends BaseActivity {
         initUI();
     }
     private void initUI() {
-        setTitle("找回密码", getResources().getColor(R.color.white));
+        setTitle("找回密码", getResources().getColor(R.color.title_color));
 
 
         EditTextSizeCheckUtil.textChangeListener textChangeListener = new EditTextSizeCheckUtil.textChangeListener(mTvConfirm);
