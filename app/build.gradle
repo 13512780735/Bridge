@@ -9,11 +9,21 @@ android {
         versionCode 1
         versionName "1.1.1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'arm64-v8a', 'armeabi-v7a', 'x86'
+        }
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
         }
     }
 }
@@ -52,4 +62,7 @@ dependencies {
     implementation 'com.elvishew:xlog:1.6.1'
     implementation project(':simpledrawerlayout')
     implementation files('libs/BaiduLBS_Android.jar')
+    //权限管理
+    implementation 'com.github.Andy-13:ZbPermission:1.0.0'
+    implementation 'in.srain.cube:ultra-ptr:1.0.11'
 }

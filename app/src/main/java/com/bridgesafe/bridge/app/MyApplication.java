@@ -32,7 +32,7 @@ public class MyApplication extends Application {
         instance = this;
         applicationContext = this;
         initLogger();//日志打印初始化
-       // SDKInitializer.initialize(this);
+        SDKInitializer.initialize(getApplicationContext());
         // MobSDK.init(this);//shareSDk初始化
         // preInitX5Core();
         // ZXingLibrary.initDisplayOpinion(this);

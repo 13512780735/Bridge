@@ -27,6 +27,9 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
     <!-- 用于申请调用相机 -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission
@@ -62,6 +65,11 @@
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="egZbr9OBQ9eEsZjL6XcKOVybT3G1HD5D" />
+        <!-- 百度地图 间隔定位必须配置此service否则功能无效 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
 
         <activity android:name=".ui.login.ForgetPwdActivity" />
         <activity android:name=".ui.login.RegisterProtocolActivity" />
@@ -76,7 +84,9 @@
         <activity android:name=".ui.other.RecordDetailActivity" />
         <activity android:name=".ui.main.WaterActivity" />
         <activity android:name=".ui.main.WeatherActivity" />
-        <activity android:name=".ui.main.TideActivity"></activity>
+        <activity android:name=".ui.main.TideActivity" />
+        <activity android:name=".ui.main.RoadActivity" />
+        <activity android:name=".ui.main.RoadDetailActivity"></activity>
     </application>
 
 </manifest>
