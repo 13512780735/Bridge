@@ -65,6 +65,10 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS );
+        int color = getResources().getColor(R.color.theme_bg_tex);
+        StatusBarUtil.setColor(this, color, 0);
+        StatusBarUtil.setLightMode(this);
         StatusBarUtil.setTranslucent(this);
         StatusBarUtil.hideFakeStatusBarView(this);
         openPermission();

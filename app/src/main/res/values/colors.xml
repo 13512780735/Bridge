@@ -5,7 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <!-- customDialog-->
     <color name="sd_color_black">#000000</color>
-    <color name="TRANSLUCENT">#99000000</color>
+    <color name="TRANSLUCENT">#00000000</color>
     <color name="sd_color_white">#ffffff</color>
     <color name="line">#AAEBEBEB</color>
     <color name="text_red">#FF0000</color>
