@@ -6,6 +6,7 @@ import android.widget.Toast;
 import com.bridgesafe.bridge.R;
 import com.bridgesafe.bridge.ui.base.BaseActivity;
 import com.jiangfeng.chart.charts.BarChart;
+import com.jiangfeng.chart.charts.LineChart;
 import com.jiangfeng.chart.data.ChartData;
 import com.jiangfeng.chart.listener.OnClickColumnListener;
 
@@ -18,8 +19,8 @@ import butterknife.BindView;
  * 水位表
  */
 public class WaterActivity extends BaseActivity {
-    @BindView(R.id.main_barChart)
-    BarChart mBarChart;
+    @BindView(R.id.main_lineChart)
+    LineChart mLineChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,36 +28,32 @@ public class WaterActivity extends BaseActivity {
         setContentView(R.layout.activity_water);
         setBackView();
         initUI();
-        initBarChart(mBarChart);
+        initChart(mLineChart);
     }
 
-    private void initBarChart(BarChart barChart) {
-        int size = 5;
+    private void initChart(LineChart lineChart) {
+        int size = 6;
         List<Double> yList = new ArrayList<>();
         for (int i = 0; i < size; i++) {
-            yList.add(10 + Math.random() * 100);
+            yList.add(10.1 + Math.random() * 100);
         }
         List<String> xAxisList = new ArrayList<>();
         for (int i = 0; i < size; i++) {
             xAxisList.add("SEP" + i);
         }
-        final ChartData<Double> chartData = new ChartData<>("营收报表", xAxisList, yList);
+        ChartData<Double> chartData = new ChartData<>("营收报表", xAxisList, yList);
         //图表外边距
-        barChart.setPadding(30);
-        // barChart.setShowXScaleLine(true);
-        barChart.setShowYScaleLine(true);
-        barChart.setXScaleSize(4);
-        barChart.setYScaleSize(8);
-        barChart.setShowPointValue(true);
-        barChart.setShowLine(true);
-        barChart.setChartData(chartData);
-        barChart.setOnClickColumnListener(new OnClickColumnListener<Double>() {
-            @Override
-            public void onClickColumn(int position, String columnName, Double columnData) {
-                Toast.makeText(getBaseContext(), "position:" + position + "name:" + columnName + "columnData:" + columnData, Toast.LENGTH_SHORT).show();
-            }
-        });
+        lineChart.setPadding(25);
+       // lineChart.setShowXScaleLine(true);
+        lineChart.setShowYScaleLine(true);
+        lineChart.setXScaleSize(6);
+        lineChart.setYScaleSize(6);
+        lineChart.setZoom(true);
+        lineChart.setLineModel(LineChart.CURVE_MODEL);
+        lineChart.setShowPointValue(true);
+        lineChart.setChartData(chartData);
     }
+
 
     private void initUI() {
         setTitle("水位表", getResources().getColor(R.color.title_color));

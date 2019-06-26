@@ -1,13 +1,18 @@
 package com.bridgesafe.bridge.ui.login;
 
+import android.Manifest;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Toast;
 
 import com.bridgesafe.bridge.R;
+import com.bridgesafe.bridge.ui.MainActivity;
 import com.bridgesafe.bridge.ui.base.BaseActivity;
+import com.elvishew.xlog.XLog;
+import com.unistrong.yang.zb_permission.ZbPermission;
 
 public class WelComeActivity extends BaseActivity {
     private View view;
@@ -20,8 +25,10 @@ public class WelComeActivity extends BaseActivity {
         setContentView(view);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         animation = AnimationUtils.loadAnimation(this, R.anim.splash_alpha);
+
         initUI();
     }
+
     private void initUI() {
         view.startAnimation(animation);
         animation.setAnimationListener(new Animation.AnimationListener() {

@@ -1,6 +1,7 @@
 package com.bridgesafe.bridge.ui.main;
 
 import android.app.DialogFragment;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -41,7 +42,8 @@ public class BridgeDetailDialogFragment extends DialogFragment {
         tv_details.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getActivity(), BridgeDetailsActivity.class);
+                getActivity().startActivity(intent);
             }
         });
     }

@@ -68,7 +68,7 @@ public class LineChart extends BarLineChartBase<Double> implements IProvider<Dou
         float textHeight = mXAxis.getTextHeight(pointStyle.fillPaint(paint));
         //折线的样式
         LineStyle lineStyle = new LineStyle();
-        lineStyle.setColor(Color.GREEN).setWidth(1f);
+        lineStyle.setColor(Color.GREEN).setWidth(3f);
         for (int i = 0; i < columnDataList.size(); i++) {
             //从第1列开始绘制坐标点
             int startIndex = i + 1;

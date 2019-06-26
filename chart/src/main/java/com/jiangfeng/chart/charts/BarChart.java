@@ -50,7 +50,7 @@ public class BarChart extends BarLineChartBase<Double> implements IProvider<Doub
         double perWidth = (chartRect.right - chartRect.left) / xSize;
         //点的样式
         FontStyle pointStyle = new FontStyle();
-        pointStyle.setWidth(5f);
+        pointStyle.setWidth(10f);
         float textHeight = mXAxis.getTextHeight(pointStyle.fillPaint(paint));
         //折线的样式
         LineStyle lineStyle = new LineStyle();
@@ -73,7 +73,7 @@ public class BarChart extends BarLineChartBase<Double> implements IProvider<Doub
                 }
                 if (isShowPointValue()) {
                     String content = mYAxis.formatData(columnDataList.get(i));
-                    pointStyle.setTextSize(18);
+                    pointStyle.setTextSize(24);
                     pointStyle.setTextColor(pointColor);
                     //X坐标=坐标点-文本宽度/2；Y坐标=坐标点-文本高度/2；
                     canvas.drawText(content, xCurrent - pointStyle.fillPaint(paint).measureText(content) / 2, yCurrent - textHeight / 2, pointStyle.fillPaint(paint));
@@ -83,9 +83,9 @@ public class BarChart extends BarLineChartBase<Double> implements IProvider<Doub
                     lineStyle.setStyle(Paint.Style.FILL);
                     lineStyle.setColor(pointColor);
                     Rect rect = new Rect();
-                    rect.left = (int) (xCurrent - perWidth / 5);
+                    rect.left = (int) (xCurrent - perWidth / 3);
                     rect.top = yCurrent;
-                    rect.right = (int) (xCurrent + perWidth / 5);
+                    rect.right = (int) (xCurrent + perWidth / 3);
                     rect.bottom = (int) mXAxis.getyZero();
                     canvas.drawRect(rect, lineStyle.fillPaint(paint));
                     //柱图区域添加

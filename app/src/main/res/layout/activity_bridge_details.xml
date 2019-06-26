@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.main.BridgeDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_20"
+            android:text="返回"
+            android:textColor="@color/theme_bg_tex" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_20"
+            android:padding="@dimen/dp_10"
+            android:src="@mipmap/record_icon" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/bridge_details_bg" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.bridgesafe.bridge.view.BorderTextView
+                android:id="@+id/tv_bridge_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="桥下净高：100m"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                app:contentBackColor="@color/theme_bg_tex"
+                app:cornerRadius="@dimen/dp_5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.328"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.43"
+                tools:ignore="MissingConstraints" />
+
+            <com.bridgesafe.bridge.view.BorderTextView
+                android:id="@+id/tv_bridge_nengjiandu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="桥区能见度：100m"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                app:contentBackColor="@color/theme_bg_tex"
+                app:cornerRadius="@dimen/dp_5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.427"
+                tools:ignore="MissingConstraints" />
+
+            <com.bridgesafe.bridge.view.BorderTextView
+                android:id="@+id/tv_bridge_feng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="桥区风速：100m"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                app:contentBackColor="@color/theme_bg_tex"
+                app:cornerRadius="@dimen/dp_5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.977"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.54"
+                tools:ignore="MissingConstraints" />
+
+            <com.bridgesafe.bridge.view.BorderTextView
+                android:id="@+id/tv_water_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="水深：5米"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                app:contentBackColor="@color/theme_bg_tex"
+                app:cornerRadius="@dimen/dp_5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.056"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.7"
+                tools:ignore="MissingConstraints" />
+
+            <com.bridgesafe.bridge.view.BorderTextView
+                android:id="@+id/tv_water_velocity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="流速：5m/s"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                app:contentBackColor="@color/theme_bg_tex"
+                app:cornerRadius="@dimen/dp_5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.057"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.79"
+                tools:ignore="MissingConstraints" />
+
+            <com.bridgesafe.bridge.view.BorderTextView
+                android:id="@+id/tv_water_flow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:drawableRight="@mipmap/icon_up01"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="流向：顺流"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                app:contentBackColor="@color/theme_bg_tex"
+                app:cornerRadius="@dimen/dp_5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.058"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.889"
+                tools:ignore="MissingConstraints" />
+
+            <com.bridgesafe.bridge.view.BorderTextView
+                android:id="@+id/tv_bridge_width"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="桥下净宽：100m"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                app:contentBackColor="@color/theme_bg_tex"
+                app:cornerRadius="@dimen/dp_5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.28"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.721"
+                tools:ignore="MissingConstraints" />
+
+            <com.bridgesafe.bridge.view.BorderTextView
+                android:id="@+id/tv_bridge_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="ng123445678"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                app:contentBackColor="@color/theme_bg_tex"
+                app:cornerRadius="@dimen/dp_5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.852"
+                tools:ignore="MissingConstraints" />
+
+            <com.bridgesafe.bridge.view.BorderTextView
+                android:id="@+id/tv_ship_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="船主：lishan"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                app:contentBackColor="@color/theme_bg_tex"
+                app:cornerRadius="@dimen/dp_5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.967"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tv_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="单位：m"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.786"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.786"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tv_birdge_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="中山港大桥"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.484"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.034"
+                tools:ignore="MissingConstraints" />
+        </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,6 +1,7 @@
 package com.bridgesafe.bridge.ui;
 
 import android.Manifest;
+import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -26,6 +27,7 @@ import com.baidu.mapapi.search.poi.PoiSearch;
 import com.baidu.mapapi.search.sug.SuggestionSearch;
 import com.bridgesafe.bridge.R;
 import com.bridgesafe.bridge.ui.base.BaseActivity;
+import com.bridgesafe.bridge.ui.login.WelComeActivity;
 import com.bridgesafe.bridge.ui.main.BridgeDetailDialogFragment;
 import com.bridgesafe.bridge.ui.main.RoadActivity;
 import com.bridgesafe.bridge.ui.main.TideActivity;
@@ -75,7 +77,19 @@ public class MainActivity extends BaseActivity {
         //初始化百度地图相关
         initBaiduMap();
     }
-
+    @Override
+    public void onConfigurationChanged(Configuration newConfig)
+    {
+        super.onConfigurationChanged(newConfig);
+        if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+        {
+//land
+        }
+        else if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT)
+        {
+//port
+        }
+    }
     private final int REQUEST_CONTACT = 50;
 
     private void openPermission() {
@@ -103,6 +117,7 @@ public class MainActivity extends BaseActivity {
 
                 });
     }
+
 
     private void initBaiduMap() {
         //获取地图控件引用
