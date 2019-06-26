@@ -55,7 +55,7 @@
         <activity
             android:name=".ui.MainActivity"
             android:configChanges="orientation|keyboardHidden" />
-        <activity android:name=".ui.login.LoginActivity"></activity>
+        <activity android:name=".ui.login.LoginActivity" />
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
@@ -91,7 +91,8 @@
         </activity>
         <activity
             android:name=".ui.main.BridgeDetailsActivity"
-            android:configChanges="orientation|keyboardHidden"></activity>
+            android:configChanges="orientation|keyboardHidden" />
+        <activity android:name=".ui.main.BridgeDetails01Activity"></activity>
     </application>
 
 </manifest>

@@ -1,18 +1,22 @@
 package com.bridgesafe.bridge.ui.main;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bridgesafe.bridge.R;
 
-import butterknife.OnClick;
-
+/**
+ * 横屏
+ */
 public class BridgeDetailsActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView tv_back;
+    private ImageView iv_change;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +27,9 @@ public class BridgeDetailsActivity extends AppCompatActivity implements View.OnC
 
     private void initUI() {
         tv_back = findViewById(R.id.tv_back);
+        iv_change = findViewById(R.id.iv_change);
         tv_back.setOnClickListener(this);
+        iv_change.setOnClickListener(this);
     }
 
     @Override
@@ -49,6 +55,10 @@ public class BridgeDetailsActivity extends AppCompatActivity implements View.OnC
         switch (v.getId()) {
             case R.id.tv_back:
                 finish();
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                break;
+            case R.id.iv_change:
+                //Intent intent=new Intent(this,)
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                 break;
         }

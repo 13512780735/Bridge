@@ -15,18 +15,27 @@
             android:id="@+id/tv_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_30"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/dp_30"
+            android:textSize="@dimen/sp_16"
             android:text="返回"
             android:textColor="@color/theme_bg_tex" />
 
         <ImageView
+            android:id="@+id/iv_change"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_30"
             android:layout_centerVertical="true"
+            android:paddingRight="@dimen/dp_30"
             android:layout_marginRight="@dimen/dp_20"
-            android:padding="@dimen/dp_10"
-            android:src="@mipmap/record_icon" />
+            android:src="@mipmap/icon_change" />
     </RelativeLayout>
 
     <FrameLayout
@@ -288,6 +297,56 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.034"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@mipmap/icon_ship01"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.605" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@mipmap/icon_up02"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.549"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.608" />
+
+            <TextView
+                android:id="@+id/tv_ship_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="船高:10m"
+                android:textColor="#00B700"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.623"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.609"
                 tools:ignore="MissingConstraints" />
         </android.support.constraint.ConstraintLayout>
     </FrameLayout>
