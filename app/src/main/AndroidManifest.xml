@@ -92,7 +92,8 @@
         <activity
             android:name=".ui.main.BridgeDetailsActivity"
             android:configChanges="orientation|keyboardHidden" />
-        <activity android:name=".ui.main.BridgeDetails01Activity"></activity>
+        <activity android:name=".ui.main.BridgeDetails01Activity"
+            android:configChanges="orientation|keyboardHidden" ></activity>
     </application>
 
 </manifest>

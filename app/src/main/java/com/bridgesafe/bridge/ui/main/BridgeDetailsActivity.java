@@ -6,10 +6,12 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bridgesafe.bridge.R;
+import com.bridgesafe.bridge.util.AppManager;
 
 /**
  * 横屏
@@ -22,14 +24,16 @@ public class BridgeDetailsActivity extends AppCompatActivity implements View.OnC
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bridge_details);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        AppManager.getAppManager().addActivity(this);
         initUI();
     }
 
     private void initUI() {
         tv_back = findViewById(R.id.tv_back);
         iv_change = findViewById(R.id.iv_change);
-        tv_back.setOnClickListener(this);
         iv_change.setOnClickListener(this);
+        tv_back.setOnClickListener(this);
     }
 
     @Override
@@ -58,7 +62,8 @@ public class BridgeDetailsActivity extends AppCompatActivity implements View.OnC
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                 break;
             case R.id.iv_change:
-                //Intent intent=new Intent(this,)
+                Intent intent = new Intent(this, BridgeDetails01Activity.class);
+                startActivity(intent);
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                 break;
         }
